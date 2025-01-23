@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  user-select: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #3e7b8a;
+  padding: 1rem;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #004d61;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 500px;
+  margin: 2rem auto;
+}
+
+.title {
+  color: #7affa6;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+}
+
+.welcome-screen p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #cccccc;
+}
+
+.start-button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Choose Continent */
+.choose-continent {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #004d61;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 600px;
+  margin: 2rem auto;
+}
+
+.choose-continent h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+
+.choose-continent p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.continent-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.continent-button {
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #007bff;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.continent-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 1% */
+.continent-button-1 {
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #640000;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.continent-button-1:hover {
+  background-color: #ff2828;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Question Card */
+.question-card {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #004d61;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 600px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.question-text {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* Options Buttons*/
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.options button {
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.options button:hover {
+  background-color: #f16500;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.options button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Timer */
+.timer {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(241, 101, 0);
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timer:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.question-round {
+  font-size: 1.2rem;
+  color: #cccccc;
+  
+}
+
+/* Correct Button */
+.option-button.correct-answer {
+  background-color: #4caf50;
+  color: white;
+}
+
+.option-button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Score Component */
+.score {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #004d61;
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 600px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.score h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.score p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-weight: bold;
+}
+
+.score h2 {
+  font-size: 3rem;
+  color: #7affa6;
+  margin-bottom: 20px;
+}
+
+.score-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.retry-button,
+.choose-button {
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.retry-button:hover,
+.choose-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.retry-button:active,
+.choose-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-screen,
+  .choose-continent,
+  .question-card,
+  .score {
+    padding: 3rem 1.5rem;
+  }
+
+  .title,
+  .score h1 {
+    font-size: 1.8rem;
+  }
+
+  .score h2 {
+    font-size: 2.5rem;
+  }
+
+  .start-button,
+  .retry-button,
+  .choose-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+}

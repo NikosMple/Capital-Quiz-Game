@@ -1,0 +1,98 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Build directories
+dist/
+build/
+.cache/
+out/
+.tmp/
+
+# React
+*.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+node_modules/
+build/
+
+# PostgreSQL
+*.pgsql
+*.sql
+*.db
+pgdata/
+pg_log/
+
+# pgAdmin
+pgadmin.log
+pgadmin.db
+
+# Environment Variables
+.env
+.env.*
+.env.local
+
+# Temporary Files and Folders
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.pid
+*.seed
+*.pid.lock
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor Directories and Files
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Visual Studio Code
+.vscode/
+.vscode-test/
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.ipr
+*.iml
+
+# Linux
+*~
+
+# Images and Media Files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+
+# Fonts
+*.ttf
+*.otf
+*.woff
+*.woff2
