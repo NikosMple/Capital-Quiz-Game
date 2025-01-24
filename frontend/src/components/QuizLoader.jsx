@@ -11,7 +11,7 @@ const QuizLoader = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`/api/quiz?continent=${continent}`);
+        const response =  await fetch(`${process.env.REACT_APP_API_URL}/api/quiz?continent=${continent}`);
         if (!response.ok) {
           throw new Error('Failed to fetch questions');
         }

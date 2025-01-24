@@ -16,7 +16,7 @@ const Quiz = ({ continent }) => {
     const fetchQuestions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/quiz?continent=${continent}`
+          `${process.env.REACT_APP_API_URL}/api/quiz?continent=${continent}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch questions");
