@@ -2,7 +2,7 @@ import express from "express";
 import env from "dotenv";
 import db from "./db/db.js";
 import path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 import cors from "cors";
 
 env.config();
@@ -14,9 +14,6 @@ const port = process.env.EXPRESS_PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-app.use(express.static(path.join(__dirname, "../build")));
-
 app.get("/api/quiz", async (req, res) => {
     const continent = req.query.continent;
     try {
@@ -27,15 +24,11 @@ app.get("/api/quiz", async (req, res) => {
         const result = await db.query(query, params);
         res.json(result.rows);
     } catch (err) {
-        console.error(err);
+        console.error("❌ Failed to fetch questions:", err);
         res.status(500).json({ error: "Failed to fetch questions" });
     }
 });
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
-
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`✅ Server running on port ${port}`);
 });

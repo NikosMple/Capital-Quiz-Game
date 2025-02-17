@@ -5,14 +5,16 @@ env.config();
 
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false },
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
 db.connect((err) => {
     if (err) {
-        console.error("Connection failed:", err.stack);
+        console.error("❌ Database Connection Failed:", err.stack);
     } else {
-        console.log("Connected to Render Database!");
+        console.log("✅ Connected to PostgreSQL!");
     }
 });
 
