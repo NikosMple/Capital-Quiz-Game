@@ -2,7 +2,7 @@
 
 Welcome to the **Capital Quiz**! This app allows users to test their knowledge of world capitals. It's a fun and educational way to learn about the capitals of different countries.
 
-Live: https://capital-quiz-game-frontend.onrender.com/
+➡️: [https://capital-quiz-game-frontend.onrender.com/](https://capital-quiz-game.onrender.com/)
 
 ## Features
 
