@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Timer from "./Timer.jsx";
 import Score from "./Score.jsx";
+import { ClipLoader } from "react-spinners";
 
-const Quiz = ({ continent }) => {
+const Quiz = ({ continent: continentProp }) => {
+  const { continent: continentParam } = useParams();
+  const continent = continentProp || continentParam;
+
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10);
@@ -59,22 +64,28 @@ const Quiz = ({ continent }) => {
   };
 
   // Color the name of country
-const highlightCountry = (question) => {
-  const countryRegex = /of\s+(the\s+)?([^.,;]+)/; 
-  const match = question.match(countryRegex);
+  const highlightCountry = (question) => {
+    const countryRegex = /of\s+(the\s+)?([^.,;]+)/;
+    const match = question.match(countryRegex);
 
-  if (match) {
-    const country = match[2].trim(); 
-    return question.replace(
-      match[0],
-      `of ${match[1] || ''}<span style="color: #7affa6; font-weight: bold;">${country}</span>`
+    if (match) {
+      const country = match[2].trim();
+      return question.replace(
+        match[0],
+        `of ${match[1] || ''}<span style="color: #7affa6; font-weight: bold;">${country}</span>`
+      );
+    }
+
+    return question;
+  };
+
+  if (loading)
+    return (
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
+        <ClipLoader color="#7affa6" size={100} />
+      </div>
     );
-  }
 
-  return question;
-};
-
-  if (loading) return <p>Loading questions...</p>;
   if (error) return <p>Error: {error}</p>;
   if (questions.length === 0)
     return <p>No questions available for this continent.</p>;
