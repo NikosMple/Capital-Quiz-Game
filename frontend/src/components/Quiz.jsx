@@ -19,16 +19,21 @@ const Quiz = ({ continent: continentProp }) => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000"; 
+      const fetchUrl = `${apiUrl}/api/quiz?continent=${continent}`;
+
+      console.log("🔍 Fetching from:", fetchUrl); 
+
       try {
-        const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/api/quiz?continent=${continent}`
-        );
+        const response = await fetch(fetchUrl);
         if (!response.ok) {
           throw new Error("Failed to fetch questions");
         }
         const data = await response.json();
+        console.log("✅ Received Questions:", data); 
         setQuestions(data);
       } catch (err) {
+        console.error("❌ Error fetching questions:", err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -63,7 +68,6 @@ const Quiz = ({ continent: continentProp }) => {
     }, 3000);
   };
 
-  // Color the name of country
   const highlightCountry = (question) => {
     const countryRegex = /of\s+(the\s+)?([^.,;]+)/;
     const match = question.match(countryRegex);

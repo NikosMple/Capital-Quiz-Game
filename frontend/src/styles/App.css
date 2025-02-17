@@ -297,32 +297,98 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .welcome-screen,
   .choose-continent,
   .question-card,
   .score {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.2rem;
   }
 
   .title,
   .score h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .score h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .start-button,
   .retry-button,
   .choose-button {
     font-size: 1rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.2rem;
   }
 
   .timer {
+    font-size: 1rem;
+  }
+
+  .options {
+    gap: 1rem;
+  }
+
+  .options button {
     font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* 🔥 Extra Responsive */
+@media (max-width: 480px) {
+  .welcome-screen,
+  .choose-continent,
+  .question-card,
+  .score {
+    width: 95%;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+  }
+
+  .title,
+  .score h1 {
+    font-size: 1.6rem;
+  }
+
+  .score h2 {
+    font-size: 2rem;
+  }
+
+  .start-button,
+  .retry-button,
+  .choose-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .timer {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .options button {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  /* Προσαρμογή των κουμπιών ηπείρων */
+  .continent-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .continent-button {
+    font-size: 1rem;
+    padding: 0.8rem;
   }
 }
