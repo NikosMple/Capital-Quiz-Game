@@ -1,7 +1,7 @@
 import pg from "pg";
-import env from "dotenv";
+import dotenv from "dotenv";
 
-env.config();
+dotenv.config(); 
 
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
@@ -10,12 +10,14 @@ const db = new pg.Client({
     },
 });
 
-db.connect((err) => {
-    if (err) {
-        console.error("❌ Database Connection Failed:", err.stack);
-    } else {
-        console.log("✅ Connected to PostgreSQL!");
+const connectDB = async () => {
+    try {
+        await db.connect();
+        console.log("Successfully connected to PostgreSQL!");
+    } catch (err) {
+        console.error("Database Connection Failed:", err.message);
+        process.exit(1); 
     }
-});
+};
 
-export default db;
+export { db, connectDB };
