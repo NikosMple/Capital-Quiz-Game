@@ -10,8 +10,9 @@ Welcome to the **Capital Quiz**! This app allows users to test their knowledge o
 - ⚛️ **Frontend**: Built with React, providing a smooth and interactive user experience.
 - 🖥️ **Backend**: Powered by Node.js and Express.js, ensuring fast and reliable server-side operations.
 - 🗄️ **Database**: Utilizes PostgreSQL for storing quiz questions and user data.
-- ☁️ **Cloud Database**: Hosted on Render for reliable access and performance.
-- 🛠️ **Database Management**: Managed using pgAdmin for easy table creation and management.
+- ☁️ **Cloud Hosting**: 
+  - **Frontend & Backend** hosted on **Render**.
+  - **Database** hosted on **Neon** for reliable access and performance.
 
 ## Getting Started
 
@@ -20,7 +21,6 @@ Welcome to the **Capital Quiz**! This app allows users to test their knowledge o
 Make sure you have the following installed:
 
 - Node.js
-- PostgreSQL
 - npm (Node package manager) or yarn
 
 ### Installation
@@ -44,14 +44,14 @@ Make sure you have the following installed:
     ```
 
 4. **Set up the database**:
-    - Create a PostgreSQL database on Render.
-    - Use pgAdmin to create and manage your tables.
+    - Create a PostgreSQL database on **Neon**.
+    - Use Neon to create and manage your tables.
     - Update the database configuration in the backend config file (e.g., `backend/config/database.js`).
 
 5. **Run the backend server**:
     ```bash
     cd backend
-    npm start
+    node server.js (or nodemon)
     ```
 
 6. **Run the frontend server**:
@@ -71,11 +71,5 @@ The app should now be running on `http://localhost:3000` for the frontend and `h
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please create an issue or submit a pull request.
-
-
-## Acknowledgements
-
-- Thanks to the developers of React, Node.js, Express.js, PostgreSQL, Render, and pgAdmin for their amazing tools.
-- Special thanks to all contributors and users who make this project better!
 
 Happy quizzing! 🎉
