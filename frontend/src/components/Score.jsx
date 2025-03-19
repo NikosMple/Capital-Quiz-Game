@@ -8,8 +8,8 @@ const Score = ({ score, total }) => {
     const ratio = score / total;
     if (ratio === 1) return "🐐"; 
     if (ratio >= 0.8) return "⭐"; 
-    if (ratio >= 0.3 && ratio <0.8 ) return "🆗"; 
-    if  (ratio < 0.3) return "💩"; 
+    if (ratio >= 0.3 && ratio < 0.8) return "🆗"; 
+    if (ratio < 0.3) return "💩"; 
   };
 
   return (
@@ -20,7 +20,15 @@ const Score = ({ score, total }) => {
         {score} / {total} {userScoreEmoji()}
       </h2>
       <div className="score-actions">
-        <button className='choose-button' onClick={() => navigate('/choose-continent')}>Choose Another Continent</button>
+        
+        <button className='choose-button' onClick={() => navigate('/choose-continent')}>
+          Choose Another Continent 
+        </button>
+
+        <button className='choose-button' onClick={() => window.location.reload()}>
+          Play Again
+        </button>
+
       </div>
     </div>
   );

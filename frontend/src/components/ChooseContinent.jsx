@@ -7,12 +7,13 @@ const ChooseContinent = () => {
       <h1>Select a Continent</h1>
       <p>Choose a continent to start the quiz: 👇</p>
         <div className="continent-links">
-          <Link to="/Europe" className="continent-button">Europe</Link>
-          <Link to="/Asia" className="continent-button">Asia</Link>
-          <Link to="/Africa" className="continent-button">Africa</Link>
-          <Link to="/America" className="continent-button">America</Link>
-          <Link to="/Oceania" className="continent-button">Oceania</Link>
-          <Link to="/Rest" className="continent-button-1">1%</Link>
+        <Link to="/quiz/Europe" className="continent-button">Europe</Link>
+        <Link to="/quiz/Asia" className="continent-button">Asia</Link>
+        <Link to="/quiz/Africa" className="continent-button">Africa</Link>
+        <Link to="/quiz/America" className="continent-button">America</Link>
+        <Link to="/quiz/Oceania" className="continent-button">Oceania</Link>
+        <Link to="/quiz/Rest" className="continent-button-1">1%</Link>
+
         </div>
     </div>
   )

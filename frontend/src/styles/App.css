@@ -56,6 +56,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .start-button:hover {
@@ -226,6 +227,21 @@ body {
 .option-button:disabled {
   opacity: 0.8;
   cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px; 
+}
+.progress {
+  height: 100%;
+  background-color: #7affa6;
+  transition: width 0.3s ease-in-out;
 }
 
 /* Score Component */
