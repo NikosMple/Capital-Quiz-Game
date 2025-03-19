@@ -9,7 +9,6 @@ import { ClipLoader } from "react-spinners";
 const Quiz = () => {
   
   const { continent } = useParams();
-  console.log("Continent from URL:", continent);  
 
   const { questions, loading, error } = useFetchQuestions(continent);
   
