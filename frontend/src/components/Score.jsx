@@ -24,11 +24,6 @@ const Score = ({ score, total }) => {
         <button className='choose-button' onClick={() => navigate('/choose-continent')}>
           Choose Another Continent 
         </button>
-
-        <button className='choose-button' onClick={() => window.location.reload()}>
-          Play Again
-        </button>
-
       </div>
     </div>
   );
